@@ -1,0 +1,76 @@
+{
+  "layout": "poster_safe_c",
+  "strategy": {
+    "marketing_goal": "promotion",
+    "funnel_stage": "BOF",
+    "visual_psychology": [
+      "Z-pattern for fast CTA reach",
+      "High contrast CTA badge",
+      "Simplified palette to avoid overload"
+    ],
+    "audience": "visual novice",
+    "rationale": [
+      "Visual novices need fail-safe presets → Poster Safe C with fixed spacing",
+      "CTA and price badge use highest hierarchy to drive conversion",
+      "Two-color palette minimizes decision fatigue"
+    ],
+    "references": [
+      "Nielsen Norman Group – Z-pattern",
+      "WCAG contrast for CTA",
+      "Gestalt simplicity for novice users"
+    ]
+  },
+  "canva": {
+    "schema_version": "1.0",
+    "canvas": { "width": 1080, "height": 1350, "units": "px" },
+    "elements": [
+      {
+        "id": "background",
+        "type": "background",
+        "content": "#F4F6FB",
+        "position": { "x": 0, "y": 0, "relative": "canvas" },
+        "size": { "width": 1080, "height": 1350, "unit": "px" },
+        "z_index": 0
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "content": "Weekend Flash Sale",
+        "position": { "x": 120, "y": 160, "relative": "canvas" },
+        "size": { "width": 840, "height": 160, "unit": "px" },
+        "style": { "font": "Inter-Black", "size": 72, "color": "#1B1F3B" },
+        "constraints": ["hierarchy_level_1", "z_pattern_start"],
+        "z_index": 2
+      },
+      {
+        "id": "product_image",
+        "type": "image",
+        "content": "product.png",
+        "position": { "x": 180, "y": 380, "relative": "canvas" },
+        "size": { "width": 720, "height": 520, "unit": "px" },
+        "constraints": ["centered_mass"],
+        "z_index": 1
+      },
+      {
+        "id": "price_badge",
+        "type": "shape",
+        "content": "-40%",
+        "position": { "x": 780, "y": 360, "relative": "canvas" },
+        "size": { "width": 180, "height": 180, "unit": "px" },
+        "style": { "font": "Inter-Bold", "size": 40, "color": "#FFFFFF", "background": "#FF4757", "border_radius": 90 },
+        "constraints": ["cta_priority"],
+        "z_index": 3
+      },
+      {
+        "id": "cta",
+        "type": "cta",
+        "content": "Shop Now",
+        "position": { "x": 360, "y": 980, "relative": "canvas" },
+        "size": { "width": 360, "height": 96, "unit": "px" },
+        "style": { "font": "Inter-SemiBold", "size": 32, "color": "#FFFFFF", "background": "#1B1F3B" },
+        "constraints": ["z_pattern_terminal"],
+        "z_index": 4
+      }
+    ]
+  }
+}
