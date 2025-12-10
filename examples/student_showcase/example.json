@@ -1,0 +1,67 @@
+{
+  "layout": "portfolio_module_grid",
+  "strategy": {
+    "marketing_goal": "present learning portfolio",
+    "funnel_stage": "MOF",
+    "visual_psychology": [
+      "F-pattern for structured reading",
+      "Whitespace to reduce cognitive load",
+      "Rule of Thirds for feature image"
+    ],
+    "audience": "student",
+    "rationale": [
+      "Students need clarity and credibility → modular blocks for achievements and reflections",
+      "1:1 text-image ratio keeps focus on narrative instead of decoration",
+      "Hero image anchored to upper-left third to create immediate focus"
+    ],
+    "references": [
+      "Nielsen Norman Group – F-pattern",
+      "Gestalt proximity for grouping achievements",
+      "WCAG contrast for readability"
+    ]
+  },
+  "canva": {
+    "schema_version": "1.0",
+    "canvas": { "width": 1080, "height": 1920, "units": "px" },
+    "elements": [
+      {
+        "id": "hero_image",
+        "type": "image",
+        "content": "student_project.jpg",
+        "position": { "x": 120, "y": 160, "relative": "canvas" },
+        "size": { "width": 420, "height": 420, "unit": "px" },
+        "constraints": ["thirds_anchor"],
+        "z_index": 1
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "content": "My Learning Portfolio",
+        "position": { "x": 600, "y": 160, "relative": "canvas" },
+        "size": { "width": 360, "height": 120, "unit": "px" },
+        "style": { "font": "Inter-Bold", "size": 52, "color": "#0A2A66" },
+        "constraints": ["hierarchy_level_1"],
+        "z_index": 2
+      },
+      {
+        "id": "modules",
+        "type": "shape",
+        "content": "grid_containers",
+        "position": { "x": 120, "y": 620, "relative": "canvas" },
+        "size": { "width": 840, "height": 1080, "unit": "px" },
+        "constraints": ["f_pattern", "whitespace_padding"],
+        "z_index": 0
+      },
+      {
+        "id": "cta",
+        "type": "cta",
+        "content": "View Detailed Projects",
+        "position": { "x": 600, "y": 1760, "relative": "canvas" },
+        "size": { "width": 360, "height": 80, "unit": "px" },
+        "style": { "font": "Inter-SemiBold", "size": 28, "color": "#FFFFFF", "background": "#1B64F2" },
+        "constraints": ["f_pattern_terminal"],
+        "z_index": 3
+      }
+    ]
+  }
+}

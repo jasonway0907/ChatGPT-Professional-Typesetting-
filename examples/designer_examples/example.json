@@ -1,0 +1,76 @@
+{
+  "layout": "editorial_split_variants",
+  "strategy": {
+    "marketing_goal": "brand awareness",
+    "funnel_stage": "TOF",
+    "visual_psychology": [
+      "Z-pattern with asymmetry to encourage exploration",
+      "Golden ratio sizing between hero and secondary blocks",
+      "Hierarchy level 1 reserved for brand mark + headline"
+    ],
+    "audience": "advertising designer",
+    "rationale": [
+      "Designers expect style-forward options → offer asymmetric split with editable variants",
+      "Brand color dominance maintains consistency while leaving room for experimentation",
+      "Moodboard hooks exposed for rapid iteration"
+    ],
+    "references": [
+      "AIGA layout standards",
+      "Material Design spacing ratios",
+      "Gestalt similarity for brand elements"
+    ]
+  },
+  "canva": {
+    "schema_version": "1.0",
+    "canvas": { "width": 1440, "height": 900, "units": "px" },
+    "elements": [
+      {
+        "id": "brand_mark",
+        "type": "image",
+        "content": "brand_logo.svg",
+        "position": { "x": 120, "y": 96, "relative": "canvas" },
+        "size": { "width": 120, "height": 120, "unit": "px" },
+        "constraints": ["hierarchy_level_1"],
+        "z_index": 3
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "content": "Launch Creative Studio",
+        "position": { "x": 280, "y": 110, "relative": "canvas" },
+        "size": { "width": 520, "height": 160, "unit": "px" },
+        "style": { "font": "Neue Haas Grotesk Bold", "size": 64, "color": "#111111" },
+        "constraints": ["z_pattern_start"],
+        "z_index": 4
+      },
+      {
+        "id": "hero_image",
+        "type": "image",
+        "content": "studio_team.jpg",
+        "position": { "x": 720, "y": 180, "relative": "canvas" },
+        "size": { "width": 600, "height": 420, "unit": "px" },
+        "constraints": ["golden_ratio_band"],
+        "z_index": 2
+      },
+      {
+        "id": "variant_panel",
+        "type": "shape",
+        "content": "moodboard_slots",
+        "position": { "x": 120, "y": 380, "relative": "canvas" },
+        "size": { "width": 520, "height": 380, "unit": "px" },
+        "constraints": ["variant_zone"],
+        "z_index": 1
+      },
+      {
+        "id": "cta",
+        "type": "cta",
+        "content": "View Creative Directions",
+        "position": { "x": 120, "y": 800, "relative": "canvas" },
+        "size": { "width": 340, "height": 64, "unit": "px" },
+        "style": { "font": "Neue Haas Grotesk Medium", "size": 24, "color": "#FFFFFF", "background": "#111111" },
+        "constraints": ["z_pattern_terminal"],
+        "z_index": 4
+      }
+    ]
+  }
+}
